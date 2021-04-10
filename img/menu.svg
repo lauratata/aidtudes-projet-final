@@ -1,0 +1,10 @@
+<svg id="Menu" xmlns="http://www.w3.org/2000/svg" width="50" height="23" viewBox="0 0 50 23">
+  <g id="Groupe_14" transform="translate(-9 -20)">
+    <rect id="Rectangle_4" width="41" height="8" rx="4" transform="translate(9 20)" fill="#fff"/>
+    <rect id="Rectangle_6"  width="25" height="8" rx="4" transform="translate(9 32)" fill="#fff"/>
+  </g>
+  <g id="Menu-2" transform="translate(9)">
+    <rect id="Rectangle_4-2" width="41" height="8" rx="4" fill="#bf4886"/>
+    <rect id="Rectangle_5"  width="31" height="9" rx="4.5" transform="translate(0 14)" fill="#bf4886"/>
+  </g>
+</svg>
