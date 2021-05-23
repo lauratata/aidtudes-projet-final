@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inscription - aidTudes</title>
+    <title>Contact - aidTudes</title>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/couleur-et-typographie.css">
     <link rel="stylesheet" href="css/mise-en-page.css">
+
+    <script src="js/slider.js"></script>
 
 </head>
 <body>
@@ -27,17 +29,26 @@
     </nav>
 </header>
 
-<h1>aidTudes</h1>
+<main>
+    <h1>Nous contacter</h1>
 
+    <div class="contact-form">
+        <form method="post" action="contact-formulaire.php" id="contact-form">
+            <label>
+                <input name="name" type="text" class="form-control" placeholder="Ton nom" required>
+            </label>
+            <label>
+                <input name="email" type="email" class="form-control" placeholder="Ton email" required>
+            </label>
+            <label>
+<textarea name="message" class="form-control" cols="30" rows="10" placeholder="Ton message"
+          required></textarea>
+            </label>
+            <input type="submit" class="form-control submit" value="Envoyer">
+        </form>
+    </div>
 
-<div class="inscription">
-    <h2>L'entraide 2.0 à ta portée</h2>
-    <label>
-        <button>S'inscrire ici</button>
-    </label>
-    <br>
-    <a href="connexion.html">Déjà inscrit ? Connecte-toi ici.</a>
-</div>
+</main>
 
 </body>
 </html>

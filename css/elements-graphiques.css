@@ -1,0 +1,36 @@
+header img {
+    width: 35px;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+}
+
+/* Bouton Quizz */
+
+.creer-quizz .icon {
+    position: relative;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    transform: translateY(10px);
+}
+
+.creer-quizz .icon::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    transform: translateY(0px) translateX(-15px) rotate(90deg);
+}
+
+/* Icones Quizz */
+
+.quizz-grille .quizz svg {
+    color: #7964F2;
+    width: 35%;
+    cursor: pointer;
+}

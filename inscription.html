@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - aidTudes</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/couleur-et-typographie.css">
+    <link rel="stylesheet" href="css/mise-en-page.css">
+
+    <script src="js/slider.js"></script>
+
+</head>
+<body>
+
+<header id="header">
+    <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
+        <div class="nav-toggle-bar"></div>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="matieres.html">Toutes les matières</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Inscription</h1>
+
+    <div class="contact-form">
+        <form method="post" action="" id="contact-form">
+            <label>
+                <input name="text" type="text" class="form-control" placeholder="Ton pseudo" required>
+            </label>
+            <label>
+                <input name="password" type="password" class="form-control" placeholder="Ton mot de passe" required>
+            </label>
+            <label>
+                <input name="password" type="password" class="form-control" placeholder="Confirme ton mot de passe" required>
+            </label>
+            <label>
+                <input name="email" type="email" class="form-control" placeholder="Ton adresse email" required>
+            </label>
+            <label>
+                <input name="text" type="text" class="form-control" placeholder="Ton établissement scolaire" required>
+            </label>
+            <input type="submit" class="form-control submit" value="S'inscrire">
+        </form>
+    </div>
+
+    <p>En vous inscrivant, vous acceptez <a href="#">les Conditions Générales
+        d'Utilisation et la Politique relative à la vie privée</a>. </p>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #E6DFEF;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    color: #BF4886;
+}
+
+a:hover {
+    color: #6357A8;
+}
+
+main {
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    min-height: 100vh;
+}
+
+main p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    padding: 1em;
+    text-align: center;
+    color: #6357A8;
+    font-weight: 200;
+}
+
+h2 {
+    color: #6357A8;
+    font-family: 'Barlow', sans-serif;
+    font-size: 22px;
+}
+
+/* Index */
+
+.inscription {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 2em;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.inscription button {
+    border: none;
+    background: linear-gradient(94deg, rgba(121, 100, 242, 1) 0%, rgba(148, 99, 173, 1) 100%);
+    border-radius: 12px;
+    margin: 1.3em;
+    padding: 0.7em;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.inscription a {
+    font-size: 1.2rem;
+}
+
+.inscription a:hover {
+    color: #6357A8;
+}
+
+.post {
+    margin: 1em;
+    border-radius: 12px;
+    background-color: white;
+    padding: 1em;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+
+.dernier-post {
+    margin: 1em;
+    border-radius: 12px;
+    background-color: #E6DFEF;
+    color: #6357A8;
+    padding: 1em;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+
+/* Bouton Quizz */
+
+.creer-quizz {
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #7964F2;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.7em;
+    cursor: pointer;
+    margin: 1em;
+}
+
+/* Grille Quizz */
+
+.quizz p {
+    font-family: 'Barlow', sans-serif;
+    color: #6357A8;
+    cursor: pointer;
+}
+
+.quizz p:hover {
+    color: #7964F2;
+}
+
+/* Notifications */
+
+.notification {
+    padding: 1em;
+    border-top: 1px dotted #9463AD;
+    font-family: 'Barlow', sans-serif;
+    color: #9463AD;
+}
+
+/* Formulaire */
+
+form {
+    margin-top: 50px;
+    transition: all 4s ease-in-out;
+    text-align: center;
+}
+
+.form-control {
+    width: 80vw;
+    border: none;
+    outline: none;
+    background: #E6DFEF;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+input {
+    height: 45px;
+}
+
+form .submit {
+    background: linear-gradient(94deg, rgba(121, 100, 242, 1) 0%, rgba(148, 99, 173, 1) 100%);
+    border-color: transparent;
+    border-radius: 12px;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Matieres */
+
+.matiere {
+    background-color: white;
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 10%;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.3em;
+    color: #7964F2;
+    text-transform: uppercase;
+    width: 45%;
+}
+
+.matiere svg {
+    color: #7964F2;
+}
