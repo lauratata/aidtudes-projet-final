@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - aidTudes</title>
+    <title>Modifiez votre mot de passe</title>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/couleur-et-typographie.css">
     <link rel="stylesheet" href="css/mise-en-page.css">
     <link rel="stylesheet" href="css/elements-graphiques.css">
-
-    <script src="js/slider.js"></script>
 
 </head>
 <body>
@@ -34,21 +32,22 @@
 </header>
 
 <main>
-    <h1>Nous contacter</h1>
+
+    <h1>Changez votre mot de passe</h1>
 
     <div class="contact-form">
-        <form method="post" action="contact-formulaire.php" id="contact-form">
+        <form method="post" action="" id="contact-form">
             <label>
-                <input name="name" type="text" class="form-control" placeholder="Ton nom" required>
+                <input name="text" type="text" class="form-control" placeholder="Ancien mot de passe" required>
             </label>
             <label>
-                <input name="email" type="email" class="form-control" placeholder="Ton email" required>
+                <input name="password" type="password" class="form-control" placeholder="Nouveau mot de passe" required>
             </label>
             <label>
-<textarea name="message" class="form-control" cols="30" rows="10" placeholder="Ton message"
-          required></textarea>
+                <input name="password" type="password" class="form-control" placeholder="Confirmation du mot de passe"
+                       required>
             </label>
-            <input type="submit" class="form-control submit" value="Envoyer">
+            <input type="submit" class="form-control submit" value="Confirmer">
         </form>
     </div>
 

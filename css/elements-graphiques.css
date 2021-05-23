@@ -34,3 +34,34 @@ header img {
     width: 35%;
     cursor: pointer;
 }
+
+/* Page matiere */
+
+.section-quizz, .section-forum, .section-videos {
+    background-color: white;
+    height: 15em;
+    width: 15em;
+    margin: 2em auto;
+    border-radius: 100%;
+}
+
+/* page profil */
+
+.profil-options {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+}
+
+.photo-de-profil {
+    text-align: center;
+}
+
+.photo-de-profil img {
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}

@@ -39,6 +39,7 @@ h2 {
     color: #6357A8;
     font-family: 'Barlow', sans-serif;
     font-size: 22px;
+    text-align: center;
 }
 
 /* Index */
@@ -83,7 +84,7 @@ h2 {
     cursor: pointer;
 }
 
-.dernier-post {
+.dernier-post, .info-compte {
     margin: 1em;
     border-radius: 12px;
     background-color: #E6DFEF;
