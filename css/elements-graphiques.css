@@ -5,6 +5,14 @@ header img {
     left: 3em;
 }
 
+.img-logo {
+    text-align: center;
+}
+
+.img-logo img {
+    width: 25%;
+}
+
 /* Bouton Quizz */
 
 .creer-quizz .icon {
@@ -64,4 +72,14 @@ header img {
     width: 10em;
     height: 10em;
     border-radius: 100%;
+}
+
+/* Slider CSS additionnel */
+
+#splide01 > ul, #splide01 > div.splide__arrows > button.splide__arrow.splide__arrow--next, #splide01 > div.splide__arrows > button.splide__arrow.splide__arrow--prev {
+    z-index: 0;
+}
+
+#splide01 {
+    margin: 1em;
 }
