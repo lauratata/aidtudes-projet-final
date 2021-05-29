@@ -95,10 +95,25 @@
 .menu a {
     color: white;
     text-decoration: none;
+    border-bottom: #ececec 0 solid;
+    transition: border-bottom 1ms;
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ececec;
+    transition: width .3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
 }
 
 .menu a:hover {
-    color: white;
+    color: #ececec;
 }
 
 .menu-open .menu li {

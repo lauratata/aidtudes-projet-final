@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Profil de {{pseudo}}- aidTudes</title>
 
+    <link rel="icon" href="favicon.png">
+
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/menu.css">
@@ -35,6 +37,7 @@
             <li><a href="notifications.html">Notifications</a></li>
             <li><a href="matieres.html">Toutes les matières</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Déconnexion</a></li>
         </ul>
     </nav>
 </header>
@@ -57,18 +60,21 @@
 
 <h2>Matières où {{pseudo}} a besoin d'aide</h2>
 
-<div class="splide">
+<div id="image-slider" class="splide">
     <div class="splide__track">
         <ul class="splide__list">
-            <li class="splide__slide">Slide 01</li>
-            <li class="splide__slide">Slide 02</li>
-            <li class="splide__slide">Slide 03</li>
+            <li class="splide__slide">
+            </li>
+            <li class="splide__slide">
+            </li>
+            <li class="splide__slide">
+            </li>
         </ul>
     </div>
 </div>
 
 <footer>
-    <img src="img/icones/bell-regular.svg" alt="Notifications">
+    <a href="notifications.html"><img src="img/icones/bell-regular.svg" alt="Notifications"></a>
     <img src="img/icones/envelope-regular.svg" alt="Messages">
 </footer>
 

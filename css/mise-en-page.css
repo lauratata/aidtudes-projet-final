@@ -148,3 +148,12 @@ div.quizz-grille {
 .quizz {
     text-align: center;
 }
+
+/* Securite et confidentialite */
+
+
+.section-securite p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
