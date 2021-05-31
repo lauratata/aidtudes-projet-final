@@ -1,8 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+if (isset($_POST['email']) && $email = $_POST['email'] != '') {
+
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        $to = "laura.taormina@gmail.com";
+        $body = "";
+
+        $body .= "De :" . $name . "\r\n";
+        $body .= "Email : " . $email . "\r\n";
+        $body .= "Message : " . $message . "\r\n";
+
+        mail($to, $message, $body);
+
+        $message_sent = true;
+        $msg = "Votre message a bien été envoyé !";
+    }
+}
+
+?>
+
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion - aidTudes</title>
+    <title>Contact - aidTudes</title>
 
     <link rel="icon" href="favicon.png">
 
@@ -12,8 +36,6 @@
     <link rel="stylesheet" href="css/couleur-et-typographie.css">
     <link rel="stylesheet" href="css/mise-en-page.css">
     <link rel="stylesheet" href="css/elements-graphiques.css">
-
-    <script src="js/slider.js"></script>
 
 </head>
 <body>
@@ -37,19 +59,29 @@
 </header>
 
 <main>
-    <h1>Se connecter</h1>
+    <h1>Nous contacter</h1>
 
     <div class="contact-form">
-        <form method="post" action="php/connexion.php" id="contact-form">
+        <form method="post" action="" id="contact-form">
             <label>
-                <input name="username" type="text" class="form-control" placeholder="Ton pseudo" required>
+                <input name="name" type="text" class="form-control" placeholder="Ton nom" required>
             </label>
             <label>
-                <input name="password" type="password" class="form-control" placeholder="Ton mot de passe" required>
+                <input name="email" type="email" class="form-control" placeholder="Ton email" required>
             </label>
-            <input type="submit" id="submit" class="form-control submit" value="Se connecter">
+            <label>
+<textarea name="message" class="form-control" cols="30" rows="10" placeholder="Ton message"
+          required></textarea>
+            </label>
+            <input type="submit" class="form-control submit" value="Envoyer">
         </form>
     </div>
+
+    <?php
+    if (isset($msg)) {
+        echo "<h2>".$msg."</h2>";
+    }
+    ?>
 
 </main>
 
