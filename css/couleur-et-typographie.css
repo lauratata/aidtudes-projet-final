@@ -190,12 +190,16 @@ select option {
     margin: 2px;
 }
 
-#contact-form > label {
+#contact-form label {
     font-family: 'Barlow', sans-serif;
     color: #6357A8;
     font-weight: 700;
+    font-size: 0.9rem;
 }
 
+.alert {
+
+}
 
 /* Matieres */
 

@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Quizz - Histoire</title>
-
-    <link rel="icon" href="favicon.png">
-
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/couleur-et-typographie.css">
-    <link rel="stylesheet" href="css/mise-en-page.css">
-    <link rel="stylesheet" href="css/elements-graphiques.css">
-
-</head>
-<body>
-
-<header id="header">
-    <a href="profil.html">
-        <img src="img/icones/users.svg" alt="Profil">
-    </a>
-    <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
-        <div class="nav-toggle-bar"></div>
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="matieres.html">Toutes les matières</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
+var QuizzHistoire = Vue.component('QuizzHistoire', {
+    template: `
+    <div>
+        
 <main>
     <h1>Quizz</h1>
     <h2>Histoire</h2>
@@ -81,11 +50,13 @@
         </div>
     </div>
 </main>
+    </div>
+    `,
+    data() {
+        return {}
+    },
+    mounted() {
 
-<footer>
-    <img src="img/icones/bell-regular.svg" alt="Notifications">
-    <img src="img/icones/envelope-regular.svg" alt="Messages">
-</footer>
-
-</body>
-</html>
+    },
+    methods: {}
+})

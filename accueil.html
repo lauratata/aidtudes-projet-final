@@ -19,124 +19,108 @@
 
     <script src="js/slider.js"></script>
 
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- Vue-router pour injection des composants => routage & navigation -->
+    <script src="https://unpkg.com/vue-router"></script>
+
+    <!-- Lib Axios pour Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Librairie momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
+    </script>
+
 </head>
 <body>
 
-<header id="header">
-    <a href="profil.html">
-        <img src="img/icones/users.svg" alt="Profil">
-    </a>
-    <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
-        <div class="nav-toggle-bar"></div>
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="matieres.html">Toutes les matières</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div id="app">
+    <header id="header">
+        <router-link :to="{name:'Profil'}">
+            <img src="img/icones/users.svg" alt="Profil">
+        </router-link>
+        <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
+            <div class="nav-toggle-bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <router-link :to="{name:'Accueil'}">
+                        Accueil
+                    </router-link>
+                </li>
+                <li>
+                    <router-link :to="{name:'Notifications'}">
+                        Notifications
+                    </router-link>
+                </li>
+                <li>
+                    <router-link :to="{name:'Matieres'}">
+                        Toutes les matières
+                    </router-link>
+                </li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="img-logo">
-    <img src="img/logo-txt.svg" alt="Logo aidtudes">
+    <div class="img-logo">
+        <img src="img/logo-txt.svg" alt="Logo aidtudes">
+    </div>
+
+    <router-view></router-view>
+
+    <footer>
+        <img src="img/icones/bell-regular.svg" alt="Notifications">
+        <img src="img/icones/envelope-regular.svg" alt="Messages">
+    </footer>
 </div>
 
-<div class="search">
-    <div class="icon"></div>
-    <div class="input">
-        <!--suppress HtmlFormInputWithoutLabel -->
-        <input type="text" placeholder="Chercher un post, une matière..." id="mysearch">
-    </div>
-    <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
-</div>
+<!-- les composants utilisés -->
+<script src="pages/accueil.vue.js"></script>
 
-<h2>Matières favorites</h2>
+<script src="pages/derniers-posts.vue.js"></script>
+<script src="pages/matieres.vue.js"></script>
+<script src="pages/matiere-histoire.js"></script>
+<script src="pages/forum-histoire.vue.js"></script>
+<script src="pages/quizz-histoire.js"></script>
 
-<div class="splide">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">Slide 01</li>
-            <li class="splide__slide">Slide 02</li>
-            <li class="splide__slide">Slide 03</li>
-            <li class="splide__slide">Slide 04</li>
-            <li class="splide__slide">Slide 05</li>
-            <li class="splide__slide">Slide 06</li>
-        </ul>
-    </div>
-</div>
+<script src="pages/profil.vue.js"></script>
+<script src="pages/notifications.vue.js"></script>
+<script src="pages/profil-utilisateur.vue.js"></script>
+<script src="pages/compte-information.vue.js"></script>
+<script src="pages/securite-et-compte.vue.js"></script>
 
+<script>
+    // Les routages / navigation de l'application
+    const routes = [
+        {path: '/', name: "Accueil", component: Accueil},
 
-<a href="derniers-posts.html"><h2>Quizz & Derniers posts</h2></a>
+        {path: '/Derniers-posts', name: "DerniersPosts", component: DerniersPosts},
+        {path: '/Matieres', name: "Matieres", component: Matieres},
+        {path: '/Histoire-Geographie', name: "MatHistoire", component: MatHistoire},
+        {path: '/Forum-Histoire-Geographie', name: "ForumHistoire", component: ForumHistoire},
 
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
-<a href="">
-    <div class="post">
-        <p>Quizz publié par : </p>
-        <p>Sujet : </p>
-    </div>
-</a>
+        {path: '/Profil', name: "Profil", component: Profil},
+        {path: '/Notifications', name: "Notifications", component: Notifications},
+        {path: '/ProfilUser', name: "ProfilUser", component: ProfilUser},
+        {path: '/Informations-compte', name: "CompteInfo", component: CompteInfo},
+        {path: '/Securite-et-compte', name: "SecuCompte", component: SecuCompte},
 
 
-<footer>
-    <img src="img/icones/bell-regular.svg" alt="Notifications">
-    <img src="img/icones/envelope-regular.svg" alt="Messages">
-</footer>
+    ];
+
+    // Initialisation du router
+    const router = new VueRouter(
+        {routes: routes}
+    );
+    // La vue de l'application (id="app")
+    const app = new Vue({
+        el: "#app",
+        router: router
+    });
+</script>
 
 </body>
 </html>
