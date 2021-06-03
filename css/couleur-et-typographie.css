@@ -57,6 +57,7 @@ h2 {
     font-family: 'Barlow', sans-serif;
     font-size: 22px;
     text-align: center;
+    margin: 1em;
 }
 
 /* Index */
@@ -215,6 +216,17 @@ select option {
     text-transform: uppercase;
     width: 45%;
 }
+
+.splide__slide > a > h4 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+#card-slider-list {
+    align-items: center;
+    text-align: -webkit-center;
+}
+
 
 .matiere svg {
     color: #7964F2;

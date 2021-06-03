@@ -1,6 +1,8 @@
 const ProfilUser = Vue.component('ProfilUser', {
     template: `
-   <div><div class="description">
+   <div>
+   
+   <div class="description">
     <p>Description</p>
 </div>
 
@@ -29,7 +31,9 @@ const ProfilUser = Vue.component('ProfilUser', {
             </li>
         </ul>
     </div>
-</div></div>
+</div>
+
+</div>
     `,
     data() {
         return {}

@@ -38,13 +38,13 @@ const Profil = Vue.component('Profil', {
     </div>
 </router-link>
 
-<a href="confidentialite.html">
+<a href="pages/confidentialite.html">
     <div class="profil-options">
         Confidentialité et sécurité
     </div>
 </a>
 
-<a href="conditions-utilisation.html">
+<a href="pages/conditions-utilisation.html">
     <div class="profil-options">
         Conditions générales d'utilisation
     </div>

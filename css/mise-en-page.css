@@ -149,6 +149,29 @@ div.quizz-grille {
     text-align: center;
 }
 
+.section-quizz, .section-forum, .section-videos {
+    text-align: -webkit-center;
+    display: flex;
+    place-content: center;
+}
+
+.section-quizz svg, .section-forum svg, .section-videos svg {
+    width: 50%;
+}
+
+.grille-videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    width: 40%;
+    margin: 1em;
+}
+
 /* Securite et confidentialite */
 
 

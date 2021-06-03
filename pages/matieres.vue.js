@@ -13,8 +13,10 @@ var Matieres = Vue.component('Matieres', {
                 </router-link>
             </li>
             <li class="splide__slide">
+            <router-link :to="{name:'MatHistoire'}">
                 <img src="img/matieres/university-solid.svg" alt="Littérature">
                 <h4>Littérature, langues et cultures de l'antiquité</h4>
+                </router-link>
             </li>
             <li class="splide__slide">
                 <img src="img/matieres/prototype.svg" alt="Humanités, littérature, philosophie">
