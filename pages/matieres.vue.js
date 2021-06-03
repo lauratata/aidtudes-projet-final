@@ -7,8 +7,10 @@ var Matieres = Vue.component('Matieres', {
     <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide">
+                <router-link :to="{name:'MatHistoire'}">
                 <img src="img/matieres/book-solid.svg" alt="Histoire Géographie">
                 <h4>Histoire Géographie</h4>
+                </router-link>
             </li>
             <li class="splide__slide">
                 <img src="img/matieres/university-solid.svg" alt="Littérature">
