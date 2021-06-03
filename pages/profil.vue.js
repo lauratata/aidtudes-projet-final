@@ -3,7 +3,7 @@ const Profil = Vue.component('Profil', {
     <!--suppress HtmlUnknownTarget -->
 <div>
         <h1>Espace utilisateur</h1>
-<h2>Pseudo</h2>
+<h2>Pseudo : aidtudes</h2>
 
 <div class="photo-de-profil">
     <img src="img/photos/belle-femme-beau-sourire-assis-posture-lotus-sol-ordinateur-argente-jambes-gesticulant-pouce-cote-soumettant-quelque-chose_171337-248.jpeg"

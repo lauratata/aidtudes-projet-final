@@ -2,10 +2,10 @@
 session_start();
 if (isset($_POST['username']) && isset($_POST['password'])) {
     // connexion à la base de données
-    $db_username = 'root';
-    $db_password = 'root';
-    $db_name = 'aidtudes';
-    $db_host = 'localhost';
+    $db_username = 'i41w1_laurataorm';
+    $db_password = 'tRVfux_4xH5';
+    $db_name = 'aidtudes;charset=utf8';
+    $db_host = 'i41w1.myd.infomaniak.com;port=3306';
     $db = mysqli_connect($db_host, $db_username, $db_password, $db_name)
     or die('could not connect to database');
 
@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($username !== "" && $password !== "") {
         $requete = "SELECT count(*) FROM utilisateur where 
-              pseudo = '" . $username . "' and mdp = '" . $password . "' ";
+              pseudo = '" . $username . "' and password = '" . $password . "' ";
         $exec_requete = mysqli_query($db, $requete);
         $reponse = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
