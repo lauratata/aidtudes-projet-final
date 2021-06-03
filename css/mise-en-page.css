@@ -181,7 +181,7 @@ iframe {
     top: 50%;
 }
 
-.g-recaptcha {
+.grille-videos .g-recaptcha {
     text-align: -webkit-center;
     margin: 1em;
 }

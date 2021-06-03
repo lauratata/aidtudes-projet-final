@@ -1,34 +1,41 @@
 <?php
-session_start();
-if (isset($_POST['username']) && isset($_POST['password'])) {
-    // connexion à la base de données
-    $db_username = 'i41w1_laurataorm';
-    $db_password = 'tRVfux_4xH5';
-    $db_name = 'aidtudes;charset=utf8';
-    $db_host = 'i41w1.myd.infomaniak.com;port=3306';
-    $db = mysqli_connect($db_host, $db_username, $db_password, $db_name)
-    or die('could not connect to database');
+session_start(); // Démarrage de la session
+require_once 'config.php'; // On inclut la connexion à la base de données
 
-    $username = mysqli_real_escape_string($db, htmlspecialchars($_POST['username']));
-    $password = mysqli_real_escape_string($db, htmlspecialchars($_POST['password']));
+if (!empty($_POST['email']) && !empty($_POST['password'])) // Si il existe les champs email, password et qu'il sont pas vides
+{
+    // Patch XSS
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
 
-    if ($username !== "" && $password !== "") {
-        $requete = "SELECT count(*) FROM utilisateur where 
-              pseudo = '" . $username . "' and password = '" . $password . "' ";
-        $exec_requete = mysqli_query($db, $requete);
-        $reponse = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
-        if ($count != 0) // nom d'utilisateur et mot de passe correctes
-        {
-            $_SESSION['username'] = $username;
-            header('Location: ../accueil.html');
+    $email = strtolower($email); // email transformé en minuscule
+
+    // On regarde si l'utilisateur est inscrit dans la table utilisateurs
+    $check = $bdd->prepare('SELECT pseudo, email, password FROM Utilisateur WHERE email = ?');
+    $check->execute(array($email));
+    $data = $check->fetch();
+    $row = $check->rowCount();
+
+    // Si > à 0 alors l'utilisateur existe
+    if ($row > 0) {
+        // Si le mail est bon niveau format
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // Si le mot de passe est le bon
+            if (password_verify($password, $data['password'])) {
+                // On créer la session et on redirige sur landing.php
+                $_SESSION['user'] = $data['email'];
+                header('Location: ../accueil.html');
+                die();
+            } else {
+                header('Location: ../connexion.html?login_err=password');
+                die();
+            }
         } else {
-            header('Location: erreur.php?erreur=1'); // utilisateur ou mot de passe incorrect
+            header('Location: ../connexion.html?login_err=email');
+            die();
         }
     } else {
-        header('Location: erreur.php?erreur=2'); // utilisateur ou mot de passe vide
+        header('Location: ../connexion.html?login_err=already');
+        die();
     }
-} else {
-    header('Location: connexion.php');
 }
-mysqli_close($db); // fermer la connexion
