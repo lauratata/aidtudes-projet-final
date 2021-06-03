@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/mise-en-page.css">
     <link rel="stylesheet" href="css/elements-graphiques.css">
 
-<!--    Script Captcha de google-->
+    <!--    Script Captcha de google-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
@@ -33,7 +33,6 @@
             <li><a href="notifications.html">Notifications</a></li>
             <li><a href="matieres.html">Toutes les matières</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Déconnexion</a></li>
         </ul>
     </nav>
 </header>
@@ -41,31 +40,66 @@
 <main>
     <h1>Inscription</h1>
 
+    <a href="connexion.html"><p>Déjà inscrit ? Connecte-toi ici.</p></a>
+
     <div class="contact-form">
         <form method="post" action="" id="contact-form">
             <label>
-                <input name="text" type="text" class="form-control" placeholder="Ton pseudo" required>
+                <input name="pseudo" type="text" class="form-control" placeholder="Ton pseudo" required>
             </label>
             <label>
                 <input name="password" type="password" class="form-control" placeholder="Ton mot de passe" required>
             </label>
             <label>
-                <input name="password" type="password" class="form-control" placeholder="Confirme ton mot de passe"
+                <input name="password-retype" type="password" class="form-control"
+                       placeholder="Confirme ton mot de passe"
                        required>
             </label>
             <label>
                 <input name="email" type="email" class="form-control" placeholder="Ton adresse email" required>
             </label>
             <label>
-                <input name="text" type="text" class="form-control" placeholder="Ton établissement scolaire" required>
+                <input name="etablissement" type="text" class="form-control" placeholder="Ton établissement scolaire" required>
+            </label>
+            <br>
+            <label>Choisis une/des matière(s) où tu pourrais aider
+                <select multiple name="matieres-aidant" id="matiere-select-2">
+                    <option value="histoire">Histoire Géographie</option>
+                    <option value="litterature">Littérature, langues et cultures de l'antiquité</option>
+                    <option value="humanites">Humanités, littérature et philosophie</option>
+                    <option value="art">Arts</option>
+                    <option value="langues">Langues, littératures et cultures étrangères</option>
+                    <option value="maths">Mathématiques</option>
+                    <option value="ses">Sciences économiques et sociales</option>
+                    <option value="numerique">Numérique et sciences informatiques</option>
+                    <option value="svt">SVT</option>
+                    <option value="physique">Physique Chimie</option>
+                    <option value="biologie">Biologie, écologie</option>
+                    <option value="ingenieur">Sciences de l'ingénieur</option>
+                </select>
+            </label>
+            <br>
+            <label>Choisis une/des matière(s) où tu aurais besoin d'aide
+                <select multiple name="matieres-aide" id="matiere-select">
+                    <option value="histoire">Histoire Géographie</option>
+                    <option value="litterature">Littérature, langues et cultures de l'antiquité</option>
+                    <option value="humanites">Humanités, littérature et philosophie</option>
+                    <option value="art">Arts</option>
+                    <option value="langues">Langues, littératures et cultures étrangères</option>
+                    <option value="maths">Mathématiques</option>
+                    <option value="ses">Sciences économiques et sociales</option>
+                    <option value="numerique">Numérique et sciences informatiques</option>
+                    <option value="svt">SVT</option>
+                    <option value="physique">Physique Chimie</option>
+                    <option value="biologie">Biologie, écologie</option>
+                    <option value="ingenieur">Sciences de l'ingénieur</option>
+                </select>
             </label>
 
             <div class="g-recaptcha" data-sitekey="6LeM1gIbAAAAALdRkWMlm3aI4FFxc8Cc8Xo2zLFg"></div>
 
             <input type="submit" class="form-control submit" value="S'inscrire">
         </form>
-
-        <!--        choix des matieres-->
 
     </div>
 

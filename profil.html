@@ -31,22 +31,33 @@
             <li><a href="notifications.html">Notifications</a></li>
             <li><a href="matieres.html">Toutes les matières</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Déconnexion</a></li>
         </ul>
     </nav>
 </header>
+
+<h1>Espace utilisateur</h1>
+<h2>Pseudo</h2>
 
 <div class="photo-de-profil">
     <img src="img/photos/belle-femme-beau-sourire-assis-posture-lotus-sol-ordinateur-argente-jambes-gesticulant-pouce-cote-soumettant-quelque-chose_171337-248.jpeg"
          alt="Image de profil">
 </div>
 
-<h1>Pseudo</h1>
 <div class="photo-de-profil">
-    <a href="#">Changez votre photo de profil</a>
+    <label><input
+            type="file"
+            class="custom-file-input"
+            id="validatedCustomFile"
+            required
+    >Changez votre photo de profil
+    </label>
 </div>
 
-
+<a href="php/deconnexion.php">
+    <div class="profil-options">
+        Déconnexion
+    </div>
+</a>
 
 <a href="profil-utilisateur.html">
     <div class="profil-options">

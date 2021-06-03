@@ -157,3 +157,8 @@ div.quizz-grille {
     position: relative;
     top: 50%;
 }
+
+.g-recaptcha {
+    text-align: -webkit-center;
+    margin: 1em;
+}

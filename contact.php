@@ -7,7 +7,7 @@ if (isset($_POST['email']) && $email = $_POST['email'] != '') {
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        $to = "laura.taormina@gmail.com";
+        $to = "aidtudes@gmail.com";
         $body = "";
 
         $body .= "De :" . $name . "\r\n";
@@ -53,7 +53,6 @@ if (isset($_POST['email']) && $email = $_POST['email'] != '') {
             <li><a href="notifications.html">Notifications</a></li>
             <li><a href="matieres.html">Toutes les matières</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Déconnexion</a></li>
         </ul>
     </nav>
 </header>
@@ -79,7 +78,7 @@ if (isset($_POST['email']) && $email = $_POST['email'] != '') {
 
     <?php
     if (isset($msg)) {
-        echo "<h2>".$msg."</h2>";
+        echo "<h2>" . $msg . "</h2>";
     }
     ?>
 
